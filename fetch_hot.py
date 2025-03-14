@@ -39,7 +39,7 @@ def generate_markdown(hot_list, filename):
 def update_readme(hot_list):
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(f"# 知乎每日热榜 - {today}\n\n")
-        f.write("以下是知乎当日的热榜内容，自动更新于每天上午 8:00 (UTC)。\n\n")
+        f.write("以下是知乎当日的热榜内容，自动更新于北京时间每天上午 8:00 。\n\n")
         for i, item in enumerate(hot_list, 1):
             title = item["target"]["title"]
             link = f"https://www.zhihu.com/question/{item['target']['id']}"
