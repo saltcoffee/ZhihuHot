@@ -6,12 +6,10 @@ on:
   workflow_dispatch:      # 支持手动触发
 
 jobs:
-
-  env:
-      TZ: Asia/Shanghai
-      
   fetch-and-update:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
     steps:
       # 检出代码
       - name: Checkout Repository
