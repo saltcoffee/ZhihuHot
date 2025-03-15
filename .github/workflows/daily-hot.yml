@@ -1,11 +1,15 @@
-name: Zhihu Daily Hot List
+name: daily-hot
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # 每天北京时间8:00
+    - cron: "0 * * * *"  # 每天北京时间8:00
   workflow_dispatch:      # 支持手动触发
 
 jobs:
+
+  env:
+      TZ: Asia/Shanghai
+      
   fetch-and-update:
     runs-on: ubuntu-latest
     steps:
